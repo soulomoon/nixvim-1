@@ -4,6 +4,28 @@ let
 in
 {
   colorschemes = {
+    onedark = {
+      enable = true;
+      settings = {
+        highlights = {
+          "@module".fg = "$cyan";
+          "@variable".fg = "$red";
+          "@property".fg = "$orange";
+          "@lsp.type.interface".fg = "$green";
+          "@lsp.type.variable".fg = "$red";
+          "@lsp.type.property".fg = "$orange";
+          "@lsp.type.typeParameter".fg = "$purple";
+          "@lsp.type.class".fg = "$green";
+          "@lsp.type.method".fg = "$cyan";
+          "@lsp.type.type" = "hl.treesitter[\"@type\"";
+          "@lsp.type.function".fg = "$blue";
+          "@lsp.type.parameter" = "hl.treesitter[\"@variable.parameter\"]";
+          "@lsp.type.keyword" = "hl.treesitter[\"@keyword\"]";
+          # "@function.method" = {fg = "$cyan"; };
+          "@lsp.type.operator" = {fg = "$green"; };
+        };
+      };
+    };
     base16 = {
       enable = true;
       setUpBar = false;

@@ -5,6 +5,7 @@
     ./keys.nix
     ./sets.nix
     ./highlight.nix
+    ./neo-tree.nix
 
     ./plug/colorscheme/biscuit.nix
     ./plug/colorscheme/colorscheme.nix
