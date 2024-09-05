@@ -6,6 +6,9 @@
 
 My Neovim config using nixvim.
 
+> [!NOTE]  
+> The colorscheme in these screenshots is [paradise](https://github.com/paradise-theme/paradise)
+
 <img src="assets/1.png" alt="nvim">
 
 <details>
@@ -154,9 +157,9 @@ You can just straight up alias something like `nix run
 
 ### Bonus extend method
 
-If you want to extend this config is your own NixOS config, you can do so using `nixvimExtend`. See [here](https://nix-community.github.io/nixvim/modules/standalone.html) for more info.
+If you want to extend this configuration is your own NixOS config, you can do so using `nixvimExtend`. See [here](https://nix-community.github.io/nixvim/modules/standalone.html) for more info.
 
-Example for overwritting the theme
+Example for overwriting the theme
 
 ```nix
 {
@@ -178,3 +181,4 @@ in {
 ## Credits
 
 - [yavko](https://github.com/yavko) for the logo
+- [nixvim](https://github.com/nix-community/nixvim) and all their maintainers/contributors

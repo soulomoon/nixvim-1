@@ -43,8 +43,6 @@
             keywordLength = 3;
           }
           { name = "rg"; }
-          { name = "cmp_yanky"; }
-          { name = "ultisnips"; }
           { name = "nvim_lua"; }
 
         ];
