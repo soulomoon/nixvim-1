@@ -1,5 +1,16 @@
 {
   autoCmd = [
+    {
+      event = ["WinClosed"];
+      pattern = "*";
+      callback = {
+        __raw = ''
+          function()
+            vim.cmd('wincmd p')
+          end
+        '';
+      };
+    }
     # Vertically center document when entering insert mode
     {
       event = "InsertEnter";
