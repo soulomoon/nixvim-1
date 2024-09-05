@@ -2,7 +2,7 @@
   description = "Elyth's NeoVim configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/71e91c409d1e654808b2621f28a327acfdad8dc2";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixvim = {
       url = "github:nix-community/nixvim";
