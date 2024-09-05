@@ -6,10 +6,10 @@
       current_line_blame = true;
       signs = {
         add = {
-          text = "│";
+          text = "┃";
         };
         change = {
-          text = "│";
+          text = "┃";
         };
         delete = {
           text = "_";
@@ -21,7 +21,7 @@
           text = "~";
         };
         untracked = {
-          text = "│";
+          text = "┃";
         };
       };
     };

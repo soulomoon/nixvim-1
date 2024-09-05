@@ -6,6 +6,10 @@ in
   plugins.lualine = {
     enable = true;
     globalstatus = true;
+    extensions = [
+      "fzf"
+      "neo-tree"
+    ];
     disabledFiletypes = {
       statusline = [
         "dashboard"
@@ -13,25 +17,7 @@ in
         "starter"
       ];
     };
-    theme = {
-      normal = {
-        a = {
-          bg = "#nil";
-        };
-        b = {
-          bg = "nil";
-        };
-        c = {
-          bg = "nil";
-        };
-        z = {
-          bg = "nil";
-        };
-        y = {
-          bg = "nil";
-        };
-      };
-    };
+    theme = "onedark";
     inactiveSections = {
       lualine_x = [
         "filename"
@@ -42,30 +28,24 @@ in
       lualine_a = [
         {
           name = "mode";
-          fmt = "string.lower";
-          color = {
-            fg = if config.colorschemes.base16.enable then colors.base04 else "nil";
-            bg = "nil";
-          };
-          separator.left = "";
-          separator.right = "";
+          icon = " ";
         }
       ];
       lualine_b = [
         {
           name = "branch";
           icon = "";
-          color = {
-            fg = if config.colorschemes.base16.enable then colors.base04 else "nil";
-            bg = "nil";
-          };
-          separator.left = "";
-          separator.right = "";
         }
         {
           name = "diff";
-          separator.left = "";
-          separator.right = "";
+          extraConfig = {
+            symbols = {
+              added = " ";
+              modified = " ";
+              removed = " ";
+            };
+          };
+
         }
       ];
       lualine_c = [
@@ -79,23 +59,29 @@ in
               hint = "󰝶 ";
             };
           };
-          color = {
-            fg = if config.colorschemes.base16.enable then colors.base08 else "nil";
-            bg = "nil";
-          };
-          separator.left = "";
-          separator.right = "";
         }
       ];
-      lualine_x = [ "" ];
+      lualine_x = [ {
+          name.__raw = ''
+            function()
+              local icon = " "
+              local status = require("copilot.api").status.data
+              return icon .. (status.message or " ")
+            end,
+
+            cond = function()
+             local ok, clients = pcall(vim.lsp.get_clients, { name = "copilot", bufnr = 0 })
+             return ok and #clients > 0
+            end,
+          '';
+        }
+      ];
       lualine_y = [
         {
           name = "filetype";
           extraConfig = {
             icon_only = true;
           };
-          separator.left = "";
-          separator.right = "";
         }
         {
           name = "filename";
@@ -106,23 +92,14 @@ in
               unnamed = "";
             };
           };
-          color = {
-            fg = if config.colorschemes.base16.enable then colors.base05 else "nil";
-            bg = "nil";
-          };
-          separator.left = "";
-          separator.right = "";
         }
       ];
       lualine_z = [
         {
+          name = "progress";
+        }
+        {
           name = "location";
-          color = {
-            fg = if config.colorschemes.base16.enable then colors.base0B else "nil";
-            bg = "nil";
-          };
-          separator.left = "";
-          separator.right = "";
         }
       ];
     };
