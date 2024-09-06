@@ -10,6 +10,8 @@
       };
     };
     settings = {
+      pickers.colorscheme.enable_preview = true;
+
       defaults = {
         layout_config = {
           horizontal = {
@@ -173,6 +175,7 @@
     };
   };
   keymaps = [
+
     {
       mode = "n";
       key = "<leader>sd";
@@ -197,14 +200,14 @@
         desc = "File browser";
       };
     }
-  ];
-  extraConfigLua = ''
-    require("telescope").setup{
-      pickers = {
-        colorscheme = {
-          enable_preview = true
-        }
-      }
+    {
+      mode = ["v"];
+      key = "<leader>ss";
+      action = "0y<ESC>:Telescope live_grep<cr><C-r>0<cr>";
+      options = {
+        desc = "search under cursor";
+      };
     }
-  '';
+  ];
+
 }

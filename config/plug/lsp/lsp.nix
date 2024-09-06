@@ -12,6 +12,7 @@
           cmd=["haskell-language-server-wrapper" "--lsp"];
           settings = {
               haskell = {
+                  sessionLoading = "multipleComponents";
                   plugin = {
                     semanticTokens = {
                       config = {
@@ -123,6 +124,12 @@
   };
   extraConfigLua = ''
     local _border = "rounded"
+    local builtin = require('telescope.builtin')
+
+    vim.lsp.handlers["textDocument/definition"] = builtin.lsp_definitions
+    vim.lsp.handlers["textDocument/references"] = builtin.lsp_references
+    vim.lsp.handlers["textDocument/implementation"] = builtin.lsp_implementations
+    vim.lsp.handlers["textDocument/typeDefinition"] = builtin.lsp_type_definitions
 
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
       vim.lsp.handlers.hover, {
