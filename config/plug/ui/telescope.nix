@@ -13,6 +13,12 @@
       pickers.colorscheme.enable_preview = true;
 
       defaults = {
+        mappings = {
+          i = {
+              "<S-Up>".__raw = "require('telescope.actions').cycle_history_prev";
+              "<S-Down>".__raw = "require('telescope.actions').cycle_history_next";
+          };
+        };
         layout_config = {
           horizontal = {
             prompt_position = "top";
