@@ -7,6 +7,10 @@
       };
       fzf-native = {
         enable = true;
+        fuzzy = true;
+        override_generic_sorter = true;
+        override_file_sorter = true;
+        case_mode = "smart_case";
       };
     };
     settings = {
@@ -52,6 +56,12 @@
           desc = "+buffer";
         };
       };
+      "<leader>fq" = {
+        action = "quickfix";
+        options = {
+          desc = "quickfix list";
+        };
+      };
       "<leader>ff" = {
         action = "find_files";
         options = {
@@ -62,6 +72,12 @@
         action = "live_grep";
         options = {
           desc = "Find text";
+        };
+      };
+      "<leader>r" = {
+        action = "resume";
+        options = {
+          desc = "Resume";
         };
       };
       "<leader>fR" = {
@@ -206,14 +222,20 @@
         desc = "File browser";
       };
     }
-    {
-      mode = ["v"];
-      key = "<leader>ss";
-      action = "0y<ESC>:Telescope live_grep<cr><C-r>0<cr>";
-      options = {
-        desc = "search under cursor";
-      };
-    }
   ];
+  extraConfigLua = ''
+    function _G.getVisualSelection()
+        vim.cmd('noau normal! "vy"')
+        local text = vim.fn.getreg("v")
+        vim.fn.setreg("v", {})
 
+        text = string.gsub(text, "\n", "")
+        if #text > 0 then
+            return text
+        else
+            return ""
+        end
+    end
+    vim.api.nvim_set_keymap('v', '<leader>ss', ':lua require"telescope.builtin".live_grep {default_text=getVisualSelection()}<cr>', {noremap = true, silent = true})
+  '';
 }

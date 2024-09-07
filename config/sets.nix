@@ -24,6 +24,9 @@
     # Enable text wrap
     wrap = true;
 
+    # Use the system clipboard
+    clipboard = "unnamedplus";
+
     # Better splitting
     splitbelow = true;
     splitright = true;
@@ -87,5 +90,8 @@
 
     # We don't need to see things like INSERT anymore
     showmode = false;
+
+    # Keep the screen when splitting
+    splitkeep = "screen";
   };
 }
