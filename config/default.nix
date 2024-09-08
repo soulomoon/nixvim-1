@@ -1,6 +1,9 @@
 { config, lib, ... }:
 {
   imports = [
+    #./plug/ui/precognition.nix
+    #./plug/utils/harpoon.nix
+    #./plug/statusline/staline.nix
     ./autocommands.nix
     ./keys.nix
     ./sets.nix
@@ -31,7 +34,6 @@
     ./plug/snippets/luasnip.nix
 
     ./plug/statusline/lualine.nix
-    #./plug/statusline/staline.nix
 
     ./plug/treesitter/treesitter-context.nix
     ./plug/treesitter/treesitter-textobjects.nix
@@ -43,10 +45,9 @@
     ./plug/ui/indent-blankline.nix
     ./plug/ui/noice.nix
     ./plug/ui/nvim-notify.nix
-    #./plug/ui/precognition.nix
     ./plug/ui/telescope.nix
 
-    #./plug/utils/harpoon.nix
+
     ./plug/utils/comment.nix
     ./plug/utils/comment-box.nix
     ./plug/utils/copilot.nix
@@ -58,7 +59,7 @@
     ./plug/utils/mini.nix
     ./plug/utils/nvim-autopairs.nix
     ./plug/utils/obsidian.nix
-    ./plug/utils/oil.nix
+    # ./plug/utils/oil.nix
     ./plug/utils/ufo.nix
     ./plug/utils/undotree.nix
     ./plug/utils/whichkey.nix
