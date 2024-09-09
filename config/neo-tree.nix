@@ -9,6 +9,10 @@
     }
   ];
 
+  plugins.diffview = {
+    enable = true;
+  };
+
   plugins.neo-tree = {
     enable = true;
     sources = ["filesystem" "buffers" "git_status" "document_symbols"];
