@@ -4,58 +4,41 @@
   lib,
   ...
 }:
-let
-  copilotChatRepo = {
-    owner = "copilotc-nvim";
-    repo = "CopilotChat.nvim";
-    rev = "82923efe22b604cf9c0cad0bb2a74aa9247755ab";
-    hash = "sha256-bdGql7WBn4yk44rd+6fK3CwBZNOZOlatnKjJLoyHBDY=";
-  };
-in
 {
-  config = lib.mkIf (config.assistant == "copilot") {
-    extraPlugins = with pkgs.vimUtils; [
-      (buildVimPlugin {
-        pname = "copilotchat";
-        version = "2.4.0";
-        src = pkgs.fetchFromGitHub copilotChatRepo;
-        meta = {
-          description = "Chat with GitHub Copilot in Neovim";
-          homepage = "https://github.com/CopilotC-Nvim/CopilotChat.nvim/";
-          license = lib.licenses.gpl3;
-        };
-      })
-    ];
-    extraConfigLua = ''
-      require("CopilotChat").setup { }
-    '';
-
-    keymaps = [
-      {
-        mode = "x";
-        key = "<leader>a";
-        action = "+copilot";
-      }
-      {
-        mode = "x";
-        key = "<leader>ae";
-        action = "<cmd>CopilotChatExplain<cr>";
-      }
-      {
-        mode = "x";
-        key = "<leader>af";
-        action = "<cmd>CopilotChatFix<cr>";
-      }
-      {
-        mode = "x";
-        key = "<leader>ad";
-        action = "<cmd>CopilotChatDocs<cr>";
-      }
-      {
-        mode = "x";
-        key = "<leader>ac";
-        action = "<cmd>CopilotChatCommit<cr>";
-      }
-    ];
+  plugins.copilot-chat = {
+    enable = true;
   };
+
+  keymaps = [
+    {
+      key = "<leader>ct";
+      action = "<CMD>CopilotChatToggle<CR>";
+      options.desc = "Toggle Copilot Chat Window";
+    }
+    {
+      key = "<leader>cs";
+      action = "<CMD>CopilotChatStop<CR>";
+      options.desc = "Stop current Copilot output";
+    }
+    {
+      key = "<leader>cr";
+      action = "<CMD>CopilotChatReview<CR>";
+      options.desc = "Review the selected code";
+    }
+    {
+      key = "<leader>ce";
+      action = "<CMD>CopilotChatExplain<CR>";
+      options.desc = "Give an explanation for the selected code";
+    }
+    {
+      key = "<leader>cd";
+      action = "<CMD>CopilotChatDocs<CR>";
+      options.desc = "Add documentation for the selection";
+    }
+    {
+      key = "<leader>cp";
+      action = "<CMD>CopilotChatTests<CR>";
+      options.desc = "Add tests for my code";
+    }
+  ];
 }
