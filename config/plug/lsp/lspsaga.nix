@@ -21,7 +21,7 @@
       enable = true; # Breadcrumbs
     };
     codeAction = {
-      extendGitSigns = false;
+      extendGitSigns = true;
       showServerName = true;
       onlyInCursor = true;
       numShortcut = true;
@@ -155,7 +155,7 @@
       action = "<cmd>Lspsaga code_action<CR>";
       options = {
         desc = "Code Action";
-        silent = true;
+        silent = false;
       };
     }
 
