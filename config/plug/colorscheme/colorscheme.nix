@@ -11,6 +11,7 @@ in
           "@module".fg = "$cyan";
           "@variable".fg = "$red";
           "@property".fg = "$orange";
+          "@lsp.type.namespace".fg = "$cyan";
           "@lsp.type.interface".fg = "$green";
           "@lsp.type.variable".fg = "$red";
           "@lsp.type.property".fg = "$orange";
