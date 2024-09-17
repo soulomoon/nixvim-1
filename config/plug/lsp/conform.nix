@@ -3,10 +3,10 @@
     enable = true;
     settings = {
 
-      # format_on_save = {
-      #   lspFallback = true;
-      #   timeoutMs = 500;
-      # };
+      format_on_save = {
+        lspFallback = false;
+        timeoutMs = 500;
+      };
       notify_on_error = true;
 
       formatters_by_ft = {
