@@ -92,7 +92,7 @@
       enable = true;
     }; # autocomplete for cmdline
     cmp-nvim-ultisnips = {
-      enable = true;
+      enable = false;
     }; # ultismips snippets
     cmp_yanky = {
       enable = true;
