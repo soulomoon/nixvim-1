@@ -1,7 +1,6 @@
 { config, lib, ... }:
 {
   imports = [
-    #./plug/ui/precognition.nix
     #./plug/utils/harpoon.nix
     #./plug/statusline/staline.nix
     ./autocommands.nix
@@ -40,7 +39,6 @@
     ./plug/treesitter/treesitter.nix
 
     ./plug/ui/alpha.nix
-    ./plug/ui/btw.nix
     ./plug/ui/bufferline.nix
     ./plug/ui/indent-blankline.nix
     ./plug/ui/noice.nix
