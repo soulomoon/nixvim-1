@@ -1,6 +1,7 @@
 { config, lib, ... }:
 {
   imports = [
+    #./plug/ui/precognition.nix
     #./plug/utils/harpoon.nix
     #./plug/statusline/staline.nix
     ./autocommands.nix
@@ -59,6 +60,7 @@
     ./plug/utils/obsidian.nix
     # ./plug/utils/oil.nix
     ./plug/utils/ufo.nix
+    ./plug/utils/toggleterm.nix
     ./plug/utils/undotree.nix
     ./plug/utils/whichkey.nix
     ./plug/utils/yaml-companion.nix

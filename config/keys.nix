@@ -66,14 +66,18 @@
       action = "+code";
     }
 
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>t";
-      action = "+test";
-    }
+    # {
+    #   mode = [
+    #     "n"
+    #     "v"
+    #   ];
+    #   key = "<leader>t";
+    #   action = "<cmd>terminal<cr>";
+    #   options = {
+    #     desc = "terminal";
+    #   };
+    #   # action = "+test";
+    # }
 
     # Tabs
     {
