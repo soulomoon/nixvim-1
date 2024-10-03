@@ -1,40 +1,43 @@
 {
   plugins = {
-    lsp-format = {
-      enable = true;
-    };
+    # lsp-format = {
+    #   enable = false;
+    # };
     lsp = {
       enable = true;
       servers = {
         hls = {
           enable = true;
-          package=null;
-          cmd=["haskell-language-server-wrapper" "--lsp"];
+          package = null;
+          cmd = [
+            "haskell-language-server-wrapper"
+            "--lsp"
+          ];
           settings = {
-              haskell = {
-                  sessionLoading = "multipleComponents";
-                  plugin = {
-                    semanticTokens = {
-                      config = {
-                          classMethodToken= "method";
-                          classToken = "class";
-                          dataConstructorToken=  "enumMember";
-                          functionToken= "function";
-                          moduleToken= "namespace";
-                          patternSynonymToken= "macro";
-                          recordFieldToken= "property";
-                          typeConstructorToken= "enum";
-                          typeFamilyToken= "interface";
-                          typeSynonymToken= "type";
-                          typeVariableToken= "typeParameter";
-                          variableToken= "variable";
-                      };
-                      globalOn = true;
+            haskell = {
+              sessionLoading = "multipleComponents";
+              plugin = {
+                semanticTokens = {
+                  config = {
+                    classMethodToken = "method";
+                    classToken = "class";
+                    dataConstructorToken = "enumMember";
+                    functionToken = "function";
+                    moduleToken = "namespace";
+                    patternSynonymToken = "macro";
+                    recordFieldToken = "property";
+                    typeConstructorToken = "enum";
+                    typeFamilyToken = "interface";
+                    typeSynonymToken = "type";
+                    typeVariableToken = "typeParameter";
+                    variableToken = "variable";
                   };
+                  globalOn = true;
                 };
               };
             };
           };
+        };
         eslint = {
           enable = true;
         };
