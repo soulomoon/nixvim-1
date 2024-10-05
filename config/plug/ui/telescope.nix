@@ -3,9 +3,9 @@
     enable = true;
     settings = {
       # profile = "telescope";
-      # winopts = {
-      #   split = "belowright vnew";
-      # };
+      winopts = {
+        split = "belowright vnew";
+      };
       fzf_opts = {
         "--history".__raw = "vim.fn.stdpath('data') .. '/fzf-lua-history'";
       };

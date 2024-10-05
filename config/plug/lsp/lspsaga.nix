@@ -56,7 +56,7 @@
       autoClose = true;
       autoPreview = true;
       closeAfterJump = true;
-      layout = "normal"; # normal or float
+      layout = "float"; # normal or float
       winPosition = "right"; # left or right
       keys = {
         jump = "e";
