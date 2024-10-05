@@ -57,7 +57,7 @@
           ]
         ];
         yaml = [
-          "yamllint"
+          "prettier"
           "yamlfmt"
         ];
       };

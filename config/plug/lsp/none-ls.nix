@@ -12,7 +12,7 @@
       };
       diagnostics = {
         statix.enable = true;
-        yamllint.enable = true;
+        yamllint.enable = false;
       };
       formatting = {
         nixpkgs_fmt.enable = true;
