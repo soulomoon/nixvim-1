@@ -48,7 +48,7 @@
           enable = true;
         };
         nil-ls = {
-          enable = true;
+          enable = false;
         };
         nixd = {
           enable = true;
