@@ -1,6 +1,6 @@
 {
   plugins.git-worktree = {
-    enable = true;
+    enable = false;
     enableTelescope = true;
   };
 }
