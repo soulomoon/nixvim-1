@@ -190,7 +190,12 @@
           desc = "fzf-lua configuration profiles";
         };
       };
+      "<leader>ca" = {
+        action = "lsp_code_actions";
+        options = {
+          desc = "fzf-lua LSP [C]ode [A]ctions";
+        };
+      };
     };
   };
-
 }

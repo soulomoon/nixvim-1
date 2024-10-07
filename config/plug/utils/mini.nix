@@ -10,7 +10,6 @@
       # };
       ai = { };
       surround = { };
-      notify = { };
       trailspace = { };
     };
   };

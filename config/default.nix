@@ -10,7 +10,7 @@
     ./highlight.nix
     ./neo-tree.nix
 
-    ./plug/colorscheme/biscuit.nix
+    # ./plug/colorscheme/biscuit.nix
     ./plug/colorscheme/colorscheme.nix
 
     ./plug/completion/cmp.nix

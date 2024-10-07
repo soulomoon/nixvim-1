@@ -109,9 +109,13 @@
           #   action = "workspace_symbol";
           #   desc = "Workspace Symbol";
           # };
-          # "<leader>cr" = {
-          #   action = "rename";
-          #   desc = "Rename";
+          "<leader>cr" = {
+            action = "rename";
+            desc = "Rename";
+          };
+          # "<leader>ca" = {
+          #   action = "code_action";
+          #   desc = "[C]ode [A]ction";
           # };
         };
         # diagnostic = {

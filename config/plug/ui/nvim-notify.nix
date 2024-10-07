@@ -1,6 +1,6 @@
 {
   plugins.notify = {
-    enable = true;
+    enable = false;
     # backgroundColour = "#000000";
     fps = 60;
     render = "default";
