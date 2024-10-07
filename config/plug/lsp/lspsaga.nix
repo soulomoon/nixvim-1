@@ -1,6 +1,12 @@
 {
   plugins.lspsaga = {
     enable = true;
+    extraOptions = {
+      error_sign = "";
+      warn_sign = "";
+      hint_sign = "";
+      infor_sign = "";
+    };
     beacon = {
       enable = true;
     };
@@ -35,11 +41,11 @@
     };
     lightbulb = {
       enable = false;
-      sign = false;
-      virtualText = true;
+      sign = true;
+      virtualText = false;
     };
     implement = {
-      enable = false;
+      enable = true;
     };
     rename = {
       autoSave = false;

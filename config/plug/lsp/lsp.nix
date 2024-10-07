@@ -7,7 +7,7 @@
       enable = true;
       capabilities = ''
         capabilities.textDocument.foldingRange = {
-            dynamicRegistration = false,
+            dynamicRegistration = true,
             lineFoldingOnly = true
         }
       '';
@@ -158,6 +158,33 @@
 
     require('lspconfig.ui.windows').default_options = {
       border = _border
+    }
+    local signs = {
+        Error = " ",
+        Warning = " ",
+        Hint = "💡",
+        Information = " ",
+      ERROR = '',
+      WARN = '',
+      HINT = '󰌵',
+      INFO = '',
+    }
+    for type, icon in pairs(signs) do
+        local hl = "DiagnosticSign" .. type
+        vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
+    end
+
+    for type, icon in pairs(signs) do
+      local hl = "LspDiagnosticsSign" .. type
+      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+    end
+
+    vim.diagnostic.config {
+      virtual_text = {
+        prefix = function(diagnostic)
+          return signs[vim.diagnostic.severity[diagnostic.severity]]
+        end,
+      },
     }
   '';
 }

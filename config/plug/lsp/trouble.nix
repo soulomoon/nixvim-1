@@ -4,6 +4,14 @@
     settings = {
       auto_preview = true;
       auto_fold = true;
+      signs = {
+        error = " ";
+        warning = " ";
+        hint = "💡";
+        information = " ";
+        other = " ";
+      };
+      use_diagnostic_signs = true;
       # auto_close = false;
       # position = "right";
       width = 80;
