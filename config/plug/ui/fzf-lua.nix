@@ -19,61 +19,55 @@
       "<leader><space>" = {
         action = "files";
         options = {
-          desc = "Find project files";
+          desc = "[F]ind project [F]iles";
         };
       };
       "<leader>/" = {
         action = "live_grep";
         options = {
-          desc = "Grep (root dir)";
-        };
-      };
-      "<leader>:" = {
-        action = "command_history";
-        options = {
-          desc = "Command History";
+          desc = "Grep (root dir[/])";
         };
       };
       "<leader>b" = {
         action = "buffers";
         options = {
-          desc = "+buffer";
+          desc = "+[B]uffer";
         };
       };
       "<leader>fq" = {
         action = "quickfix";
         options = {
-          desc = "quickfix list";
+          desc = "[F]ind [Q]uickfix list";
         };
       };
       "<leader>ff" = {
         action = "files";
         options = {
-          desc = "Find project files";
+          desc = "[F]ind project [F]iles";
         };
       };
-      "<leader>fr" = {
+      "<leader>ft" = {
         action = "live_grep";
         options = {
-          desc = "Find text";
+          desc = "[F]ind [T]ext";
         };
       };
       "<leader>r" = {
         action = "resume";
         options = {
-          desc = "Resume";
+          desc = "[R]esume";
         };
       };
-      "<leader>fg" = {
+      "<leader>fr" = {
         action = "oldfiles";
         options = {
-          desc = "Recent";
+          desc = "[F]ind [R]ecent";
         };
       };
       "<leader>fb" = {
         action = "buffers";
         options = {
-          desc = "Buffers";
+          desc = "[F]ind [B]uffers";
         };
       };
       # "<C-p>" = {
@@ -97,25 +91,25 @@
       "<leader>sa" = {
         action = "autocommands";
         options = {
-          desc = "Auto Commands";
+          desc = "[S]earch [A]uto Commands";
         };
       };
       "<leader>sb" = {
         action = "lgrep_curbuf";
         options = {
-          desc = "live grep current buffer";
+          desc = "[S]earch current [B]uffer";
         };
       };
       "<leader>sc" = {
         action = "command_history";
         options = {
-          desc = "Command History";
+          desc = "[S]earch [C]ommand History";
         };
       };
       "<leader>sC" = {
         action = "commands";
         options = {
-          desc = "Commands";
+          desc = "[S]earch [C]ommands";
         };
       };
       "<leader>sd" = {
@@ -145,7 +139,7 @@
       "<leader>sk" = {
         action = "keymaps";
         options = {
-          desc = "Keymaps";
+          desc = "[S]earch [K]eymaps";
         };
       };
       "<leader>sM" = {
