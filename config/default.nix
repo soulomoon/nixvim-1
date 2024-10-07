@@ -45,7 +45,9 @@
     ./plug/ui/noice.nix
     ./plug/ui/nvim-notify.nix
     ./plug/ui/telescope.nix
-
+    ./plug/ui/nvim-bqf.nix
+    ./plug/ui/fzf-lua.nix
+    ./plug/ui/quicker.nix
 
     ./plug/utils/comment.nix
     ./plug/utils/comment-box.nix

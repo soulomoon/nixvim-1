@@ -108,25 +108,26 @@
       };
     }
 
-    {
-      mode = "n";
-      key = "K";
-      action = "<cmd>Lspsaga hover_doc<CR>";
-      options = {
-        desc = "Hover";
-        silent = true;
-      };
-    }
+    # {
+    #   mode = "n";
+    #   key = "K";
+    #   action = "<cmd>Lspsaga hover_doc<CR>";
+    #   options = {
+    #     desc = "Hover";
+    #     silent = true;
+    #   };
+    # }
 
-    {
-      mode = "n";
-      key = "<leader>cw";
-      action = "<cmd>Lspsaga outline<CR>";
-      options = {
-        desc = "Outline";
-        silent = true;
-      };
-    }
+    # use trouble instead
+    # {
+    #   mode = "n";
+    #   key = "<leader>cw";
+    #   action = "<cmd>Lspsaga outline<CR>";
+    #   options = {
+    #     desc = "Outline";
+    #     silent = true;
+    #   };
+    # }
 
     {
       mode = "n";

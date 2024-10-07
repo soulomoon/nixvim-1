@@ -101,10 +101,10 @@
             action = "type_definition";
             desc = "Type Definition";
           };
-          # K = {
-          #   action = "hover";
-          #   desc = "Hover";
-          # };
+          K = {
+            action = "hover";
+            desc = "Hover";
+          };
           # "<leader>cw" = {
           #   action = "workspace_symbol";
           #   desc = "Workspace Symbol";

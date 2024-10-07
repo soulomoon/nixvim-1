@@ -1,8 +1,12 @@
+{ pkgs, ... }:
 {
+  # extraPlugins = with pkgs.vimPlugins; [
+  #    nui-nvim
+  # ];
   plugins.noice = {
     enable = true;
     notify = {
-      enabled = false;
+      enabled = true;
     };
     messages = {
       enabled = true; # Adds a padding-bottom to neovim statusline when set to false for some reason
@@ -12,8 +16,15 @@
         enabled = true;
       };
       progress = {
-        enabled = false;
-        view = "mini";
+        enabled = true;
+        # view = "mini";
+      };
+      hover = {
+        enabled = true;
+      };
+      override = {
+        "vim.lsp.util.stylize_markdown" = true;
+        "vim.lsp.util.convert_input_to_markdown_lines" = true;
       };
     };
     popupmenu = {

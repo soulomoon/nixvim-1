@@ -1,7 +1,7 @@
 {
   plugins.notify = {
-    enable = false;
-    backgroundColour = "#000000";
+    enable = true;
+    # backgroundColour = "#000000";
     fps = 60;
     render = "default";
     timeout = 1000;

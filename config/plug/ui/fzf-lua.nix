@@ -1,41 +1,23 @@
 {
-  plugins.telescope = {
-    enable = false;
-    extensions = {
-      file-browser = {
-        enable = true;
-      };
-      fzf-native = {
-        enable = true;
-        settings = {
-          fuzzy = true;
-          override_generic_sorter = true;
-          override_file_sorter = true;
-          case_mode = "smart_case";
-        };
-      };
-    };
+  plugins.fzf-lua = {
+    enable = true;
     settings = {
-      pickers.colorscheme.enable_preview = true;
-
-      defaults = {
-        mappings = {
-          i = {
-            "<S-Up>".__raw = "require('telescope.actions').cycle_history_prev";
-            "<S-Down>".__raw = "require('telescope.actions').cycle_history_next";
-          };
+      # profile = "telescope";
+      winopts = {
+        split = "belowright vnew";
+      };
+      fzf_opts = {
+        "--history".__raw = "vim.fn.stdpath('data') .. '/fzf-lua-history'";
+      };
+      keymap = {
+        fzf = {
+          "ctrl-q" = "select-all+accept";
         };
-        layout_config = {
-          horizontal = {
-            prompt_position = "top";
-          };
-        };
-        sorting_strategy = "ascending";
       };
     };
     keymaps = {
       "<leader><space>" = {
-        action = "find_files";
+        action = "files";
         options = {
           desc = "Find project files";
         };
@@ -64,14 +46,8 @@
           desc = "quickfix list";
         };
       };
-      "<ctrl-q>" = {
-        action = "select-all+accept";
-        options = {
-          desc = "send all to quickfix list";
-        };
-      };
       "<leader>ff" = {
-        action = "find_files";
+        action = "files";
         options = {
           desc = "Find project files";
         };
@@ -83,12 +59,6 @@
         };
       };
       "<leader>r" = {
-        action = "resume";
-        options = {
-          desc = "Resume";
-        };
-      };
-      "<leader>fR" = {
         action = "resume";
         options = {
           desc = "Resume";
@@ -106,12 +76,12 @@
           desc = "Buffers";
         };
       };
-      "<C-p>" = {
-        action = "git_files";
-        options = {
-          desc = "Search git files";
-        };
-      };
+      # "<C-p>" = {
+      #   action = "git_files";
+      #   options = {
+      #     desc = "Search git files";
+      #   };
+      # };
       "<leader>gc" = {
         action = "git_commits";
         options = {
@@ -131,9 +101,9 @@
         };
       };
       "<leader>sb" = {
-        action = "current_buffer_fuzzy_find";
+        action = "lgrep_curbuf";
         options = {
-          desc = "Buffer";
+          desc = "live grep current buffer";
         };
       };
       "<leader>sc" = {
@@ -148,8 +118,14 @@
           desc = "Commands";
         };
       };
+      "<leader>sd" = {
+        action = "diagnostics_document";
+        options = {
+          desc = "Document diagnostics";
+        };
+      };
       "<leader>sD" = {
-        action = "diagnostics";
+        action = "diagnostics_workspace";
         options = {
           desc = "Workspace diagnostics";
         };
@@ -202,48 +178,25 @@
           desc = "Colorscheme preview";
         };
       };
+      "<leader>fc" = {
+        action = "builtin";
+        options = {
+          desc = "fzf-lua builtin commands";
+        };
+      };
+      "<C-p>" = {
+        action = "builtin";
+        options = {
+          desc = "fzf-lua builtin commands";
+        };
+      };
+      "<leader>fp" = {
+        action = "profiles";
+        options = {
+          desc = "fzf-lua configuration profiles";
+        };
+      };
     };
   };
-  # keymaps = [
-  #
-  #   {
-  #     mode = "n";
-  #     key = "<leader>sd";
-  #     action = "<cmd>Telescope diagnostics bufnr=0<cr>";
-  #     options = {
-  #       desc = "Document diagnostics";
-  #     };
-  #   }
-  #   {
-  #     mode = "n";
-  #     key = "<leader>fe";
-  #     action = "<cmd>Telescope file_browser<cr>";
-  #     options = {
-  #       desc = "File browser";
-  #     };
-  #   }
-  #   {
-  #     mode = "n";
-  #     key = "<leader>fE";
-  #     action = "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>";
-  #     options = {
-  #       desc = "File browser";
-  #     };
-  #   }
-  # ];
-  # extraConfigLua = ''
-  #   function _G.getVisualSelection()
-  #       vim.cmd('noau normal! "vy"')
-  #       local text = vim.fn.getreg("v")
-  #       vim.fn.setreg("v", {})
 
-  #       text = string.gsub(text, "\n", "")
-  #       if #text > 0 then
-  #           return text
-  #       else
-  #           return ""
-  #       end
-  #   end
-  #   vim.api.nvim_set_keymap('v', '<leader>ss', ':lua require"telescope.builtin".live_grep {default_text=getVisualSelection()}<cr>', {noremap = true, silent = true})
-  # '';
 }
