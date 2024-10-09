@@ -44,6 +44,9 @@
             };
           };
         };
+        rust-analyzer = {
+          enable = true;
+        };
         eslint = {
           enable = true;
         };
