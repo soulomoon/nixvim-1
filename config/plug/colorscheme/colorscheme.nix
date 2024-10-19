@@ -23,15 +23,17 @@ in
           "@lsp.type.parameter" = "hl.treesitter[\"@variable.parameter\"]";
           "@lsp.type.keyword" = "hl.treesitter[\"@keyword\"]";
           # "@function.method" = {fg = "$cyan"; };
-          "@lsp.type.operator" = {fg = "$green"; };
+          "@lsp.type.operator" = {
+            fg = "$green";
+          };
         };
       };
     };
-    base16 = {
-      enable = false;
-      setUpBar = false;
-      colorscheme = import ../../colors/${config.theme}.nix { };
-    };
+    # base16 = {
+    #   enable = false;
+    #   setUpBar = false;
+    #   colorscheme = import ../../colors/${config.theme}.nix { };
+    # };
     gruvbox = {
       enable = false;
       settings = {

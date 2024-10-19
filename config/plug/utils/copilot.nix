@@ -31,7 +31,7 @@
       options.desc = "Give an explanation for the selected code";
     }
     {
-      key = "<leader>cd";
+      key = "<leader>cc";
       action = "<CMD>CopilotChatDocs<CR>";
       options.desc = "Add documentation for the selection";
     }

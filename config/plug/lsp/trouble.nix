@@ -55,6 +55,12 @@
   keymaps = [
     {
       mode = "n";
+      key = "<leader>xx";
+      action = "<cmd>Trouble diagnostics toggle<cr>";
+      options.desc = "Diagnostics (Trouble)";
+    }
+    {
+      mode = "n";
       key = "<leader>cl";
       action = "<cmd>Trouble lsp toggle focus=false<CR>";
       options = {

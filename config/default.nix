@@ -7,7 +7,7 @@
     ./autocommands.nix
     ./keys.nix
     ./sets.nix
-    ./highlight.nix
+    # ./highlight.nix
     ./neo-tree.nix
 
     # ./plug/colorscheme/biscuit.nix
@@ -69,22 +69,6 @@
     ./plug/utils/bufdelete.nix
   ];
   options = {
-    theme = lib.mkOption {
-      default = lib.mkDefault "onedark";
-      type = lib.types.enum [
-        "onedark"
-        "paradise"
-        "decay"
-        "edge-dark"
-        "mountain"
-        "tokyonight"
-        "everforest"
-        "everblush"
-        "jellybeans"
-        "aquarium"
-        "gruvbox"
-      ];
-    };
     assistant = lib.mkOption {
       default = "none";
       type = lib.types.enum [
@@ -92,12 +76,5 @@
         "none"
       ];
     };
-  };
-  config = {
-    # The base16 theme to use, if you want to use another theme, change it in colorscheme.nix
-    theme = "onedark";
-    extraConfigLua = ''
-      _G.theme = "${config.theme}"
-    '';
   };
 }
