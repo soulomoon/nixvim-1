@@ -40,6 +40,7 @@
     ./plug/treesitter/treesitter.nix
 
     ./plug/ui/alpha.nix
+    ./plug/ui/web-devicons.nix
     ./plug/ui/bufferline.nix
     ./plug/ui/indent-blankline.nix
     ./plug/ui/noice.nix

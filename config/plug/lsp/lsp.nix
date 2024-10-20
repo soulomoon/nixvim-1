@@ -14,6 +14,7 @@
       servers = {
         hls = {
           enable = true;
+          installGhc = false;
           package = null;
           cmd = [
             "haskell-language-server-wrapper"
@@ -44,8 +45,10 @@
             };
           };
         };
-        rust-analyzer = {
+        rust_analyzer = {
           enable = true;
+          installCargo = false;
+          installRustc = false;
         };
         eslint = {
           enable = true;
@@ -53,10 +56,10 @@
         html = {
           enable = true;
         };
-        lua-ls = {
+        lua_ls = {
           enable = true;
         };
-        nil-ls = {
+        nil_ls = {
           enable = false;
         };
         nixd = {
@@ -74,7 +77,7 @@
         terraformls = {
           enable = true;
         };
-        tsserver = {
+        ts_ls = {
           enable = false;
         };
         yamlls = {

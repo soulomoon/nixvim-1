@@ -4,9 +4,10 @@
   inputs = {
     # nixpkgs.url = "github:nixos/nixpkgs/71e91c409d1e654808b2621f28a327acfdad8dc2";
     # nixpkgs.url = "github:nixos/nixpkgs/71e91c409d1e654808b2621f28a327acfdad8dc2";
+    # nixpkgs.url = "flake:nixpkgs/nixpkgs-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixvim = {
-      url = "github:nix-community/nixvim/main";
+      url = "github:nix-community/nixvim/e3239b4d328efaaf090892fbca71a1008dbc5a59";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     pre-commit-hooks = {

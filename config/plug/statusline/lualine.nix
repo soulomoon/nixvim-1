@@ -10,7 +10,7 @@ in
       "fzf"
       "neo-tree"
     ];
-    disabledFiletypes = {
+    disabled_filetypes = {
       statusline = [
         "dashboard"
         "alpha"
@@ -61,7 +61,8 @@ in
           };
         }
       ];
-      lualine_x = [ {
+      lualine_x = [
+        {
           name.__raw = ''
             function()
               local icon = " "

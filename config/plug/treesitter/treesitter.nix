@@ -31,6 +31,7 @@
 
   plugins.treesitter = {
     enable = true;
+    gccPackage = null;
 
     settings = {
       indent = {
