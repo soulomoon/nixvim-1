@@ -1,17 +1,30 @@
+{ pkgs, ... }:
 {
   plugins.harpoon = {
-    enable = false;
+    enable = true;
     enableTelescope = true;
-    keymapsSilent = true;
     keymaps = {
-      addFile = "<leader>ha";
-      toggleQuickMenu = "<C-e>";
+      addFile = "<leader>a";
       navFile = {
-        "1" = "<leader>hj";
-        "2" = "<leader>hk";
-        "3" = "<leader>hl";
-        "4" = "<leader>hm";
+        "1" = "<leader>1";
+        "2" = "<leader>2";
+        "3" = "<leader>3";
+        "4" = "<leader>4";
       };
+      navNext = "<leader>j";
+      navPrev = "<leader>k";
+      # toggleQuickMenu = "<leader>h";
+      # gotoTerminal = {
+      #   "1" = "<C-j>";
+      #   "2" = "<C-k>";
+      #   "3" = "<C-l>";
+      #   "4" = "<C-m>";
+      # };
+      # tmuxGotoTerminal = {
+      #   "1" = "<C-1>";
+      #   "2" = "<C-2>";
+      #   "{down-of}" = "<leader>G";
+      # };
     };
   };
 }

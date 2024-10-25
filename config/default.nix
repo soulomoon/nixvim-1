@@ -2,7 +2,6 @@
 {
   imports = [
     #./plug/ui/precognition.nix
-    #./plug/utils/harpoon.nix
     #./plug/statusline/staline.nix
     ./autocommands.nix
     ./keys.nix
@@ -54,7 +53,7 @@
     ./plug/utils/comment-box.nix
     ./plug/utils/copilot.nix
     ./plug/utils/flash.nix
-    ./plug/utils/grapple.nix
+    ./plug/utils/harpoon.nix
     ./plug/utils/hardtime.nix
     ./plug/utils/illuminate.nix
     ./plug/utils/markview.nix
