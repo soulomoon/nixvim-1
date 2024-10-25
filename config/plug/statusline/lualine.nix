@@ -27,43 +27,39 @@ in
       sections = {
         lualine_a = [
           {
-            name = "mode";
+            __unkeyed = "mode";
             icon = " ";
           }
         ];
         lualine_b = [
           {
-            name = "branch";
+            __unkeyed = "branch";
             icon = "";
           }
           {
-            name = "diff";
-            extraConfig = {
-              symbols = {
-                added = " ";
-                modified = " ";
-                removed = " ";
-              };
+            __unkeyed = "diff";
+            symbols = {
+              added = " ";
+              modified = " ";
+              removed = " ";
             };
 
           }
         ];
         lualine_c = [
           {
-            name = "diagnostic";
-            extraConfig = {
-              symbols = {
-                error = " ";
-                warn = " ";
-                info = " ";
-                hint = "󰝶 ";
-              };
+            __unkeyed = "diagnostic";
+            symbols = {
+              error = " ";
+              warn = " ";
+              info = " ";
+              hint = "󰝶 ";
             };
           }
         ];
         lualine_x = [
           {
-            name.__raw = ''
+            __unkeyed.__raw = ''
               function()
                 local icon = " "
                 local status = require("copilot.api").status.data
@@ -79,33 +75,26 @@ in
         ];
         lualine_y = [
           {
-            name = "filetype";
-            extraConfig = {
-              icon_only = true;
-            };
+            __unkeyed = "filetype";
+            icon_only = true;
           }
           {
-            name = "filename";
-            extraConfig = {
-              symbols = {
-                modified = "";
-                readonly = "👁️";
-                unnamed = "";
-              };
+            __unkeyed = "filename";
+            symbols = {
+              modified = "";
+              readonly = "👁️";
+              unnamed = "";
             };
           }
         ];
         lualine_z = [
           {
-            name = "progress";
+            __unkeyed = "progress";
           }
           {
-            name = "location";
+            _unkeyed = "location";
           }
         ];
-        options = {
-          theme = "onedark";
-        };
       };
     };
   };
