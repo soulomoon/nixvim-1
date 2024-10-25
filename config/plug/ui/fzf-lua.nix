@@ -2,10 +2,7 @@
   plugins.fzf-lua = {
     enable = true;
     settings = {
-      # profile = "telescope";
-      winopts = {
-        split = "belowright vnew";
-      };
+      profile = "telescope";
       fzf_opts = {
         "--history".__raw = "vim.fn.stdpath('data') .. '/fzf-lua-history'";
       };
