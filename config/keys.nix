@@ -343,6 +343,30 @@
       };
     }
 
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "]q";
+      action = ":cnext<cr>";
+      options = {
+        desc = "Next quickfix item";
+      };
+    }
+
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "[q";
+      action = ":cprev<cr>";
+      options = {
+        desc = "Previous quickfix item";
+      };
+    }
+
     # <C-c> instead of pressing esc just because
     {
       mode = "i";
