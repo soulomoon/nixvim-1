@@ -7,8 +7,8 @@
     # nixpkgs.url = "flake:nixpkgs/nixpkgs-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixvim = {
-      url = "github:nix-community/nixvim/e3239b4d328efaaf090892fbca71a1008dbc5a59";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nixvim/8b19d154823619af7ced464185e8d13ec80a758b";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
